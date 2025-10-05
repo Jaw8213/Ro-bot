@@ -6,11 +6,15 @@ const client = new Client({
         IntentsBitField.Flags.GuildMembers,
         IntentsBitField.Flags.GuildMessages,
         IntentsBitField.Flags.MessageContent
-    ]
+    ],
 });
 
 client.on('ready', (c) => {
     console.log(`${c.user.tag} is ready`);
+});
+
+client.on('messageCreate', (message) => {
+    console.log(message);
 });
 
 client.login(
