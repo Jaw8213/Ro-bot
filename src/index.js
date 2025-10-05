@@ -1,4 +1,6 @@
-const { Client, IntentsBitField} = require('discord.js');
+require('dotenv').config();
+
+const { Client, IntentsBitField } = require('discord.js');
 
 const client = new Client({
     intents: [
@@ -14,9 +16,10 @@ client.on('ready', (c) => {
 });
 
 client.on('messageCreate', (message) => {
+    if (message.content === 'hello') {
+        message.reply('Hello there!');
+    }
     console.log(message);
 });
 
-client.login(
-    'MTQyMzc3NTQ4NzY2MTk2OTU0Mg.GLl0hi.UR0m8KlAAGNrdYU3mY421iACJhRHXEdF4lKMHw'
-);
+client.login(process.env.TOKEN);
