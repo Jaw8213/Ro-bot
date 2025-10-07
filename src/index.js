@@ -79,4 +79,4 @@ client.on('messageCreate', (message) => {
 });
 
 // logining in the bot
-client.login(process.env.TOKEN);
+client.login(process.env.DISCORD_TOKEN);
