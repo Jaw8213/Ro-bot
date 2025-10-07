@@ -67,8 +67,8 @@ client.on('ready', async (c) => {
     // fetching from trello
     previousCards = await getTrelloCards();
 
-    //checks for updates and updates every 20 seconds
-    setInterval(() => checkTrelloUpdates(channel),20 * 1000);
+    //checks for updates and updates every 5 seconds
+    setInterval(() => checkTrelloUpdates(channel),5 * 1000);
 });
 
 // testing if bot is working
